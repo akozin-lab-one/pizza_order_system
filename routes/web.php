@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ContactController;
@@ -75,6 +76,26 @@ Route::middleware(['auth'])->group(function () {
 
             // editData
             Route::post('update/{id}', [CategoryController::class, 'updatedata'])->name('Category#update');
+        });
+
+        Route::prefix('shop')->group(function(){
+            //shoplist
+            Route::get('shoplist', [ShopController::class, 'shopListPage'])->name('Shop#List');
+
+            //create shop list Page
+            Route::get('shopcreatePage', [ShopController::class, 'shopCreatePage'] )->name('Shop#createPage');
+
+            //create shop list
+            Route::post('create', [ShopController::class, 'createShop'])->name('create#shop');
+
+            //detail view
+            Route::get('detailShop/{id}', [ShopController::class, 'detailShop'])->name('detail#shop');
+
+            //edit shop page
+            Route::get('editShop/{id}', [ShopController::class, 'EditShopPage'])->name('edit#shopPage');
+
+            //edit shop
+            Route::post('edit', [ShopController::class, 'editShop'])->name('edit#shop');
         });
 
         //contact message

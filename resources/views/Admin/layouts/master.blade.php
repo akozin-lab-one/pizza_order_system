@@ -53,6 +53,10 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li>
+                            <a href="{{route('Shop#List')}}">
+                                <i class="fa-solid fa-shop"></i>Shops</a>
+                        </li>
+                        <li>
                             <a href="{{route('Category#list')}}">
                                 <i class="fas fa-chart-bar"></i>Category</a>
                         </li>

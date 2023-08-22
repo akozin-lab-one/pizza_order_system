@@ -76,7 +76,7 @@
                                             <img class="img-fluid w-100" style="height: 280px;" src="{{asset('storage/'. $p->image)}}" alt="">
                                             <input type="hidden" id="count" value="0">
                                             <div class="product-action">
-                                                <a type="button" class="btn btn-outline-dark btn-square" id="cartBtn"><i class="fa fa-shopping-cart"></i></a>
+                                                {{-- <a type="button" class="btn btn-outline-dark btn-square" id="cartBtn"><i class="fa fa-shopping-cart"></i></a> --}}
                                                 <a class="btn btn-outline-dark btn-square" href="{{route('user#productdetail', $p->id)}}"><i class="fa fa-circle-info"></i></a>
                                             </div>
                                         </div>
